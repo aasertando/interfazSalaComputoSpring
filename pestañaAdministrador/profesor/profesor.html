@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profesor | Salas computo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <nav
+        class="nav justify-content-center"
+    >
+        <!-- <a class="nav-link active" href="#" aria-current="page"
+            >Cosa1</a
+        > -->
+        <a class="nav-link" href="#">Estudiante</a>
+        <a class="nav-link" href="#">Profesor</a>
+        <a class="nav-link" href="#">Computador</a>
+        <a class="nav-link" href="#">Portatil</a>
+        <a class="nav-link" href="#">Sala</a>
+    </nav>
+
+    
+    
+    
+    <label style="width: 100%; text-align: center; margin: 20px;">Ingresar estudiantes</label>
+    <div
+    class="container-sm"
+    style="width: 35%;"
+    >
+
+        <div class="mb-3">
+            <label for="inputProfesorNombre" class="form-label">Nombre profesor</label>
+            <input
+            type="text"
+            class="form-control"
+            name="inputProfesorNombre"
+            method="POST"
+            required
+            autocomplete="off"
+            />
+        </div>
+        
+
+        <div class="mb-3">
+            <label for="inputProfesorContraseña" class="form-label">Contraseña profesor</label>
+            <input
+                type="text"
+                class="form-control"
+                name="inputProfesorContraseña"
+                method="POST"
+                required
+                autocomplete="off"
+            />
+        </div>
+
+        <div class="mb-3">
+            <label for="selectEstudianteCarrera" class="form-label">Facultad profesor</label>
+            <select
+                class="form-select form-select-lg"
+                name="selectEstudianteCarrera"
+            >
+                <!-- <option selected></option> -->
+                <option value="ing. sistemas">Ing. Sistemas</option>
+                <option value="filosofia">Filosofia</option>
+                <option value="matematicas">Matematicas</option>
+                <option value="derecho">Derecho</option>
+                <option value="ingles">Ingles</option>
+            </select>
+        </div>
+
+        <button
+            type="submit"
+            class="btn btn-primary"
+            style="width: 100%;"
+        >
+            Ingresar profesor
+        </button>
+        
+    </div>
+
+    <div
+        class="container"
+    >
+        
+        
+
+    </div>
+    
+
+    <label style="width: 100%; text-align: center; margin: 20px;">Profesores ingresados</label>
+
+</body>
+</html>
