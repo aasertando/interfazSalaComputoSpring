@@ -37,8 +37,6 @@
                 <input
                 type="text"
                 class="form-control"
-                name="inputEstudianteNombre"
-                method="POST"
                 required
                 autocomplete="off"
                 th:field = "*{nombre}"
@@ -51,8 +49,6 @@
                 <input
                     type="text"
                     class="form-control"
-                    name="inputEstudianteContraseña"
-                    method="POST"
                     required
                     autocomplete="off"
                     th:field = "*{contraseña}"
@@ -63,7 +59,6 @@
                 <label for="selectEstudianteCarrera" class="form-label">Carrera estudiante</label>
                 <select
                     class="form-select form-select-lg"
-                    name="selectEstudianteCarrera"
                     th:field = "*{carrera}"
                 >
                     <!-- <option selected></option> -->

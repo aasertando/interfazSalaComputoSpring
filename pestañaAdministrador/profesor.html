@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,8 +37,6 @@
                 <input
                 type="text"
                 class="form-control"
-                name="inputProfesorNombre"
-                method="POST"
                 required
                 autocomplete="off"
                 th:field = "*{nombre}"
@@ -51,8 +49,6 @@
                 <input
                     type="text"
                     class="form-control"
-                    name="inputProfesorContraseña"
-                    method="POST"
                     required
                     autocomplete="off"
                     th:field = "*{contraseña}"
@@ -63,7 +59,6 @@
                 <label for="selectProfesorCarrera" class="form-label">Facultad profesor</label>
                 <select
                     class="form-select form-select-lg"
-                    name="selectProfesorCarrera"
                     th:field = "*{carrera}"
                 >
                     <!-- <option selected></option> -->

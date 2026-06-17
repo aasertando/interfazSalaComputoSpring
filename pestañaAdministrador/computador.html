@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,8 +20,6 @@
         <a class="nav-link" href="portatil.html">Portatil</a>
         <a class="nav-link" href="sala.html">Sala</a>
     </nav>
-
-    
     
     
     <label style="width: 100%; text-align: center; margin: 20px;">Ingresar computador</label>
@@ -36,8 +34,6 @@
                 <input
                 type="text"
                 class="form-control"
-                name="inputComputadorEspec"
-                method="POST"
                 required
                 autocomplete="off"
                 th:field = "*{especificaciones}"
@@ -48,11 +44,10 @@
                 <label for="selectComputadorSalaPerteneciente" class="form-label">Sala perteneciente</label>
                 <select
                     class="form-select form-select-lg"
-                    name="selectComputadorSalaPerteneciente"
                     th:field = "*{salaPerteneciente}"
+                    required
                 >
-                    <!-- <option selected></option> -->
-                    <option value="">${sala}</option>
+                    <option th:each = "sala : ${salas}" th:value="${sala.id}" th:text="${sala.id} + ' | ' + ${sala.nombre} + ' | ' + ${sala.capacidad}"></option>
                 </select>
             </div>
 
