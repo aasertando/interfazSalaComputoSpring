@@ -29,7 +29,7 @@
     class="container-sm"
     style="width: 35%;"
     >
-        <form th:action="@{/computador/crear}" method="post">
+        <form th:action="@{/computador/crear}" th:object="${computador}" method="post">
 
             <div class="mb-3">
                 <label for="inputComputadorEspec" class="form-label">Especificaciones</label>
@@ -40,6 +40,7 @@
                 method="POST"
                 required
                 autocomplete="off"
+                th:field = "*{especificaciones}"
                 />
             </div>
 
@@ -48,6 +49,7 @@
                 <select
                     class="form-select form-select-lg"
                     name="selectComputadorSalaPerteneciente"
+                    th:field = "*{salaPerteneciente}"
                 >
                     <!-- <option selected></option> -->
                     <option value="">${sala}</option>

@@ -29,8 +29,8 @@
     class="container-sm"
     style="width: 35%;"
     >
-    
-        <form th:action="@{/estudiante/crear}" method="post">
+
+        <form th:action="@{/estudiante/crear}" th:object="${estudiante}" method="post">
 
             <div class="mb-3">
                 <label for="inputEstudianteNombre" class="form-label">Nombre estudiante</label>
@@ -41,6 +41,7 @@
                 method="POST"
                 required
                 autocomplete="off"
+                th:field = "*{nombre}"
                 />
             </div>
 
@@ -54,6 +55,7 @@
                     method="POST"
                     required
                     autocomplete="off"
+                    th:field = "*{contraseña}"
                 />
             </div>
 
@@ -62,6 +64,7 @@
                 <select
                     class="form-select form-select-lg"
                     name="selectEstudianteCarrera"
+                    th:field = "*{carrera}"
                 >
                     <!-- <option selected></option> -->
                     <option value="ing. sistemas">Ing. Sistemas</option>

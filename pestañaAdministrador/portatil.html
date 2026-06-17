@@ -30,7 +30,7 @@
     style="width: 35%;"
     >
 
-        <form th:action="@{/portatil/crear}" method="post">
+        <form th:action="@{/portatil/crear}" th:object="${portatil}" method="post">
 
             <div class="mb-3">
                 <label for="inputPortatilEspec" class="form-label">Especificaciones</label>
@@ -41,6 +41,7 @@
                 method="POST"
                 required
                 autocomplete="off"
+                th:field = "*{especificaciones}"
                 />
             </div>
 
