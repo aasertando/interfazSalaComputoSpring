@@ -30,53 +30,57 @@
     style="width: 35%;"
     >
 
-        <div class="mb-3">
-            <label for="inputProfesorNombre" class="form-label">Nombre profesor</label>
-            <input
-            type="text"
-            class="form-control"
-            name="inputProfesorNombre"
-            method="POST"
-            required
-            autocomplete="off"
-            />
-        </div>
-        
+        <form th:action="@{/profesor/crear}" method="post">
 
-        <div class="mb-3">
-            <label for="inputProfesorContraseña" class="form-label">Contraseña profesor</label>
-            <input
+            <div class="mb-3">
+                <label for="inputProfesorNombre" class="form-label">Nombre profesor</label>
+                <input
                 type="text"
                 class="form-control"
-                name="inputProfesorContraseña"
+                name="inputProfesorNombre"
                 method="POST"
                 required
                 autocomplete="off"
-            />
-        </div>
+                />
+            </div>
 
-        <div class="mb-3">
-            <label for="selectEstudianteCarrera" class="form-label">Facultad profesor</label>
-            <select
-                class="form-select form-select-lg"
-                name="selectEstudianteCarrera"
+
+            <div class="mb-3">
+                <label for="inputProfesorContraseña" class="form-label">Contraseña profesor</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    name="inputProfesorContraseña"
+                    method="POST"
+                    required
+                    autocomplete="off"
+                />
+            </div>
+
+            <div class="mb-3">
+                <label for="selectEstudianteCarrera" class="form-label">Facultad profesor</label>
+                <select
+                    class="form-select form-select-lg"
+                    name="selectEstudianteCarrera"
+                >
+                    <!-- <option selected></option> -->
+                    <option value="ing. sistemas">Ing. Sistemas</option>
+                    <option value="filosofia">Filosofia</option>
+                    <option value="matematicas">Matematicas</option>
+                    <option value="derecho">Derecho</option>
+                    <option value="ingles">Ingles</option>
+                </select>
+            </div>
+
+            <button
+                type="submit"
+                class="btn btn-primary"
+                style="width: 100%;"
             >
-                <!-- <option selected></option> -->
-                <option value="ing. sistemas">Ing. Sistemas</option>
-                <option value="filosofia">Filosofia</option>
-                <option value="matematicas">Matematicas</option>
-                <option value="derecho">Derecho</option>
-                <option value="ingles">Ingles</option>
-            </select>
-        </div>
-
-        <button
-            type="submit"
-            class="btn btn-primary"
-            style="width: 100%;"
-        >
-            Ingresar profesor
-        </button>
+                Ingresar profesor
+            </button>
+            
+        </form>
         
     </div>
 

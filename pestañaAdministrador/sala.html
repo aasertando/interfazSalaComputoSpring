@@ -29,40 +29,44 @@
     class="container-sm"
     style="width: 35%;"
     >
+    
+        <form th:action="@{/sala/crear}" method="post">
 
-        <div class="mb-3">
-            <label for="inputSalaNombre" class="form-label">Nombre</label>
-            <input
-            type="text"
-            class="form-control"
-            name="inputSalaNombre"
-            method="POST"
-            required
-            autocomplete="off"
-            />
-        </div>
-        
-        <div class="mb-3">
-            <label for="inputSalaCapacidad" class="form-label">Capacidad</label>
-            <input
-                type="number"
+            <div class="mb-3">
+                <label for="inputSalaNombre" class="form-label">Nombre</label>
+                <input
+                type="text"
                 class="form-control"
-                name="inputSalaCapacidad"
+                name="inputSalaNombre"
                 method="POST"
                 required
                 autocomplete="off"
                 />
-        </div>
-        
+            </div>
 
-        <button
-            type="submit"
-            class="btn btn-primary"
-            style="width: 100%;"
-        >
-            Ingresar sala
-        </button>
-        
+            <div class="mb-3">
+                <label for="inputSalaCapacidad" class="form-label">Capacidad</label>
+                <input
+                    type="number"
+                    class="form-control"
+                    name="inputSalaCapacidad"
+                    method="POST"
+                    required
+                    autocomplete="off"
+                    />
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn btn-primary"
+                style="width: 100%;"
+            >
+                Ingresar sala
+            </button>
+
+        </form>
+
     </div>
 
     <div

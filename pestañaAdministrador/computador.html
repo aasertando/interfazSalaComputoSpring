@@ -29,38 +29,40 @@
     class="container-sm"
     style="width: 35%;"
     >
+        <form th:action="@{/computador/crear}" method="post">
 
-        <div class="mb-3">
-            <label for="inputComputadorEspec" class="form-label">Especificaciones</label>
-            <input
-            type="text"
-            class="form-control"
-            name="inputComputadorEspec"
-            method="POST"
-            required
-            autocomplete="off"
-            />
-        </div>
+            <div class="mb-3">
+                <label for="inputComputadorEspec" class="form-label">Especificaciones</label>
+                <input
+                type="text"
+                class="form-control"
+                name="inputComputadorEspec"
+                method="POST"
+                required
+                autocomplete="off"
+                />
+            </div>
 
-        <div class="mb-3">
-            <label for="selectComputadorSalaPerteneciente" class="form-label">Sala perteneciente</label>
-            <select
-                class="form-select form-select-lg"
-                name="selectComputadorSalaPerteneciente"
+            <div class="mb-3">
+                <label for="selectComputadorSalaPerteneciente" class="form-label">Sala perteneciente</label>
+                <select
+                    class="form-select form-select-lg"
+                    name="selectComputadorSalaPerteneciente"
+                >
+                    <!-- <option selected></option> -->
+                    <option value="">${sala}</option>
+                </select>
+            </div>
+
+            <button
+                type="submit"
+                class="btn btn-primary"
+                style="width: 100%;"
             >
-                <!-- <option selected></option> -->
-                <option value="">${sala}</option>
-            </select>
-        </div>
+                Ingresar computador
+            </button>
 
-        <button
-            type="submit"
-            class="btn btn-primary"
-            style="width: 100%;"
-        >
-            Ingresar computador
-        </button>
-        
+        </form>
     </div>
 
     <div

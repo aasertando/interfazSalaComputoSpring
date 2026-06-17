@@ -30,25 +30,29 @@
     style="width: 35%;"
     >
 
-        <div class="mb-3">
-            <label for="inputPortatilEspec" class="form-label">Especificaciones</label>
-            <input
-            type="text"
-            class="form-control"
-            name="inputPortatilEspec"
-            method="POST"
-            required
-            autocomplete="off"
-            />
-        </div>
+        <form th:action="@{/portatil/crear}" method="post">
 
-        <button
-            type="submit"
-            class="btn btn-primary"
-            style="width: 100%;"
-        >
-            Ingresar portatil
-        </button>
+            <div class="mb-3">
+                <label for="inputPortatilEspec" class="form-label">Especificaciones</label>
+                <input
+                type="text"
+                class="form-control"
+                name="inputPortatilEspec"
+                method="POST"
+                required
+                autocomplete="off"
+                />
+            </div>
+
+            <button
+                type="submit"
+                class="btn btn-primary"
+                style="width: 100%;"
+            >
+                Ingresar portatil
+            </button>
+    
+        </form>
         
     </div>
 
